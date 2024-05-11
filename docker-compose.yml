@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  webapplication2:
+    image: ${DOCKER_REGISTRY-}webapplication2
+    build:
+      context: .
+      dockerfile: WebApplication2/Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
